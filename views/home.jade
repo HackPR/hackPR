@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h3 hackPR
+  form(action='/hacker', method="post")
+    label(for="name") Name:
+    input(type="text" id="name", name="name")
+    label(for="email") Email:
+    input(type="email", id="email", name="email")
+    button(type="submit") Send
