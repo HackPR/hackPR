@@ -1,10 +1,21 @@
 extends layout
 
 block content
-  h3 hackPR
-  form(action='/hacker', method="post")
-    label(for="name") Name:
-    input(type="text" id="name", name="name")
-    label(for="email") Email:
-    input(type="email", id="email", name="email")
-    button(type="submit") Send
+  center
+    div#container
+      center
+        img(src='/images/logo.png')
+        p Donec sed odio dui. Donec sed odio dui. 
+          span.emphasis Esto es algo fancy para resaltar cosas 
+          |  Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.
+        form(action='/hacker', method="post")
+          input(type="email", id="email", name="email" placeholder="Enter your Email Address")
+          button(type="submit" id="hidden_submit") Submit
+          a(id="fake_submit" onclick='submit()')  Pre-Register
+        p(class="contact_us") If you have any doubt or want to help us please 
+          a(href='mailto:info@hackpr.io') contact us
+
+    script.
+        function submit(){
+            document.getElementById("hidden_submit").click();
+        }
