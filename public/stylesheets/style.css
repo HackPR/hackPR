@@ -29,39 +29,40 @@ img{
 */}
 
 form{
-	width: 40%;
+	width: 300px;
 	min-width: 200px;
 	margin-top: 30px;
+	height: 100px;
 }
 input{
-	display: block;
+	/*display: block;*/
 	height: 30px;
-	width: 100%;
+	width: 8;
 /*	margin-bottom: 10px;
 */	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 	border: 1px rgba(126, 126, 126, 1) solid;
-	padding-left: 6px;
 	font-weight: lighter;
 	font-size: 14px;
 	text-align: center;
+	float: left;
+	width: 246px;
 }
 
 #fake_submit{
 	background: none;
 	border: 1px #2980b9 solid;
-	height: 30px;
-	width: 100%;
-	padding-left: 6px;
-	margin-top: -1px;
-/*	margin-top: 20px;
-*/	display: block;
+	height: 32px;
+	width: 48px;
+
+	display: block;
 	color: #2980b9;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 30px;
 	text-decoration: none;
-		font-weight: lighter;
+	font-weight: lighter;
+	float: right;
 
 }
 
