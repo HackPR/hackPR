@@ -20,10 +20,10 @@ exports.collect = function (req, res, next) {
         to : req.body.email,
         from : 'developer.cesar@gmail.com',
         subject : 'hackPR: Good things are brewing!',
-        text : 'Thank you for subscribing to hackPR email, we will keep you posted with event details through your provided email address.'
+        html: '<h3>You\'ve been succesfully added to our mailling list.</h3><p>Awesome things are incoming! We\'ll keep you posted on important event details through this email.</p><p>Thanks</p><h5>- HackPR Team </h5>'
       }, function (err, json) {
         if (err) {
-          throw err;l
+          throw err;
         }
         res.render('thanks', {email : req.body.email});
       });
