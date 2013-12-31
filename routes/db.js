@@ -7,12 +7,12 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function callback () {
-  var hackerSchema = mongoose.Schema({
-    hacker : String,
+  console.log('DB connected.');
+});
+
+var hackerSchema = mongoose.Schema({
     email : String
   });
 
   exports.Hacker = mongoose.model('Hacker', hackerSchema);
-
-});
 

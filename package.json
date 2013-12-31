@@ -8,6 +8,8 @@
   "dependencies": {
     "express": "3.4.0",
     "jade": "*",
-    "mongoose" : "*"
+    "mongoose" : "*",
+    "sendgrid" : "0.4.4",
+    "dotenv" : "*"
   }
 }
