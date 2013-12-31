@@ -25,8 +25,7 @@ exports.collect = function (req, res, next) {
         if (err) {
           throw err;l
         }
-        console.log('email sent');
-        res.render('thanks');
+        res.render('thanks', {email : req.body.email});
       });
     });
   }
