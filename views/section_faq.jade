@@ -1,39 +1,4 @@
-extends layout
-
-block content
-  #main.container
-    .main_cover
-      center
-        h1.main_logo hack
-          span.PR PR
-        h2.date March 29 - 30, 2014
-        h2.location University of Puerto Rico - Mayagüez Campus
-        form#subscribe_form(action='/hacker', method="post")
-          input.main_input_subscribe(type="email", id="email", name="email", placeholder='email')
-          a#fake_button(onclick='submit()')  go
-          button.submit_btn(type="submit" id="hidden_submit") Submit
-        a(href="#content") content
-    nav.navbar.navbar-inverse#navbar(role='navigation')
-      .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#nav_menu')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-      #nav_menu.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li
-              a(href="#faq") F.A.Q.
-            li
-              a(href="#logistics") LOGISTICS
-            li
-              a(href="#sponsors") SPONSORS
-            li
-              a(href="#about") ABOUT
-            li
-              a(href="#contact") CONTACT US
-  #content.container
-      #faq_div.content_section
+#faq_div.content_section
         h1 Frequently Asked Questions
           span#faq.menu_offset
         .row
@@ -59,18 +24,3 @@ block content
             p
             h3 Teams Size?
            p There is essentially no size limit, but is recommended to not exced 5 members.
-      #logistics_div.content_section
-        h1 Logistics
-          span#logistics.menu_offset
-      #sponsors_div.content_section
-        h1 Logistics
-          span#sponsors.menu_offset
-      #about_div.content_section
-        h1 About
-          span#about.menu_offset
-      #contact_div.content_section
-        h1 Contact
-          span#contact.menu_offset     
-
-
-

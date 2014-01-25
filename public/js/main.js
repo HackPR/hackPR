@@ -35,5 +35,37 @@ $(function() {
 $(document).ready(function(){
 	var height = window.innerHeight;
 	$('#main').css('height', height);
-	$('.content_section').css('height',height-100);
+	$('.content_section').css('min-height',height);
 })
+
+
+$('nav a').on('click', function() {
+    var scrollAnchor = $(this).attr('href'),
+        scrollPoint = $('#' + scrollAnchor).offset().top - 80;
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 500);
+
+    return false;
+
+})
+
+
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop()+window.innerHeight;
+    if (windscroll >= 100) {
+        $('nav').addClass('fixed');
+        $('.content_section').each(function(i) {
+            if ($(this).position().top <= windscroll - 80) {
+                $('nav li.active').removeClass('active');
+                $('nav li').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+
+        $('nav li.active').removeClass('active');
+        $('nav li:first').addClass('active');
+    }
+
+}).scroll();
