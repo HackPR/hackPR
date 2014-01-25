@@ -40,19 +40,18 @@ $(function() {
     }
   });
 });
-
+//change div on nav click
 $('nav a').on('click', function() {
     var scrollAnchor = $(this).attr('href'),
         scrollPoint = $('#' + scrollAnchor).offset().top - 80;
     $('body,html').animate({
         scrollTop: scrollPoint
     }, 500);
-
     return false;
 
 })
 
-
+//change active class on nav elements
 $(window).scroll(function() {
     var windscroll = $(window).scrollTop()+window.innerHeight;
     if (windscroll >= 100) {
@@ -63,11 +62,30 @@ $(window).scroll(function() {
                 $('nav li').eq(i).addClass('active');
             }
         });
-
     } else {
 
         $('nav li.active').removeClass('active');
         $('nav li:first').addClass('active');
     }
-
 }).scroll();
+
+
+
+
+ $.ajax({
+    url:'/hacker',
+    type:'POST',
+    data: $('#email').val(),
+    success: function(){
+            console.log('OK');
+    },
+    error: function(){
+            console.log('ERROR');
+    },
+    statusCode: {
+      200: function(){
+        console.log('pre-registro exitoso');
+        // $('.open-success-popup').click();
+      },
+    }
+})
