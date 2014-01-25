@@ -1,21 +1,76 @@
 extends layout
 
 block content
-  center
-    div#container
+  #main.container
+    .main_cover
       center
-        img(src='/images/logo.png')
-        p Donec sed odio dui. Donec sed odio dui. 
-          span.emphasis Esto es algo fancy para resaltar cosas 
-          |  Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue.
-        form(action='/hacker', method="post")
-          input(type="email", id="email", name="email" placeholder="Enter your Email Address")
-          a(id="fake_submit" onclick='submit()')  go
-          button(type="submit" id="hidden_submit") Submit
-        p(class="contact_us") If you have any doubt or want to help us please 
-          a(href='mailto:info@hackpr.io') contact us
+        h1.main_logo hack
+          span.PR PR
+        h2.date March 29 - 30, 2014
+        h2.location University of Puerto Rico - Mayagüez Campus
+        form#subscribe_form(action='/hacker', method="post")
+          input.main_input_subscribe(type="email", id="email", name="email", placeholder='email')
+          a#fake_button(onclick='submit()')  go
+          button.submit_btn(type="submit" id="hidden_submit") Submit
+        a(href="#content") content
+    nav.navbar.navbar-inverse#navbar(role='navigation')
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#nav_menu')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+      #nav_menu.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href="#faq") F.A.Q.
+            li
+              a(href="#logistics") LOGISTICS
+            li
+              a(href="#sponsors") SPONSORS
+            li
+              a(href="#about") ABOUT
+            li
+              a(href="#contact") CONTACT US
+  #content.container
+      #faq_div.content_section
+        h1 Frequently Asked Questions
+          span#faq.menu_offset
+        .row
+          .col-md-6
+            h3 What is a Hackathon?
+            p As defined by wikipedia: A hackathon (also known as a hack day, hackfest or codefest) is an event in which computer programmers and others involved in software development, including graphic designers, interface designers and project managers, collaborate intensively on software projects
+            h3 What is HackPR?
+            p hackPR is Puerto Rico’s biggest university hackathon heading into it’s second year. Last year, more than 100 of PRs best developers and hardware hackers gather to create some awesome projects during a 12 hour span. 
+            h3 I’m not a student anymore, can I still participate?
+            p hackPR is open for anyone to participate, however in order to be eligible for the prizes, the participant must be a student with a valid .edu email address. 
+            h3 What if I’m a newbie?
+            p There are no restrictions on skill level for this hackathon, however, participants are encouraged to have prior programming or hacking experience.
+            h3 What should I bring?
+            p Essentially only a laptop and it’s charger. If other components are required for your project, these must be brought, no components will be provided.
+            h3 Will there be food?
+            p Expect tons of food and SCHWAG 
+          .col-md-6
+            h3 Can I start working before the hackathon?
+            p All code developed towards your hack must be developed during the appointed time. That being said, the design specifications of the hack can be drafted beforehand. 
+            h3 How does the judging works?
+            p 
+            h3 What are demos like?
+            p
+            h3 Teams Size?
+           p There is essentially no size limit, but is recommended to not exced 5 members.
+      #logistics_div.content_section
+        h1 Logistics
+          span#logistics.menu_offset
+      #sponsors_div.content_section
+        h1 Logistics
+          span#sponsors.menu_offset
+      #about_div.content_section
+        h1 About
+          span#about.menu_offset
+      #contact_div.content_section
+        h1 Contact
+          span#contact.menu_offset     
 
-    script.
-        function submit(){
-            document.getElementById("hidden_submit").click();
-        }
+
+
