@@ -268,7 +268,7 @@ nav a:hover{
 #faq{
     height: 100vh;
 }
-.menu_offset{
+.menu_offset, .faq_offset{
   position: relative;
   top: -98px;
 }
@@ -300,4 +300,67 @@ a.section {
 .content_section h1{
   margin-top: 0px;
   /*padding-top: 30px;*/
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  h1.main_logo{
+    width: auto;
+    font-size: 80px;
+  }
+  h2.date{
+    width: auto;
+    font-size: 30px;
+  }
+  h2.location{
+    width: auto;
+  }
+  #subscribe_form{
+    width: 90%;
+  }
+  .main_input_subscribe{
+    width: 75%;
+    float: left;
+  }
+  a#fake_button{
+    width: 25%;
+    float: right;
+  }
+  #back_to_top, #back_to_top:hover{
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  #nav_menu{
+    height: auto !important;
+  }
+  .content_section{
+    margin-top: 0px !important;
+    padding: 10px !important;
+    padding-top: 40px !important;
+  }
+  #content{
+    padding-top: 0px !important; 
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background: #a3bd64 !important;
+  }
+  .navbar-nav>li{
+    height: 40px !important;
+  }
+  .navbar-nav>li>a{
+    line-height: 20px;
+    font-size: 18px;
+    color: #fff !important;
+  }
+  .menu_offset{
+    top: -60px;
+  }
+  .faq_offset{
+    /*position*/: relative;
+    top: -190px;
+  }
+  #faq_div.content_section{
+    padding-top: 0px;
+  }
 }
