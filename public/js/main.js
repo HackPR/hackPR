@@ -1,12 +1,21 @@
+// set full window height
+$(document).ready(function(){
+  var height = window.innerHeight;
+  $('#main').css('min-height', height);
+  $('.main_cover').css('min-height', height);
+  $('.content_section').css('min-height',height);
+  $('#history_div').css('min-height',height);
+})
 
+//main submit form
 function submit(){
     document.getElementById("hidden_submit").click();
 }
 
+//fixing navbar
 $(document).ready(function(){
 	var device_height = $(window).height();
 	$(window).bind('scroll', function() {
-		// console.log($(window).scrollTop() >= device_height);
       if ($(window).scrollTop() > device_height) {
         $('#navbar').addClass('fixed');
        }
@@ -16,7 +25,7 @@ $(document).ready(function(){
     });
 })
 
-
+//changing element
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -31,13 +40,6 @@ $(function() {
     }
   });
 });
-
-$(document).ready(function(){
-	var height = window.innerHeight;
-	$('#main').css('height', height);
-	$('.content_section').css('min-height',height);
-})
-
 
 $('nav a').on('click', function() {
     var scrollAnchor = $(this).attr('href'),
