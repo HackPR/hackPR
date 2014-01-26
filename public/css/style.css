@@ -59,7 +59,7 @@ nav .main_logo{
   /*font-size: 160px;*/
   /*margin-bottom: 0px;*/
   /*text-shadow: 0px 0px 2px #000;*/
-  width: 600px;
+  width: 100px;
   /*line-height: -30px;*/
   /*padding-bottom: 30px; */
 }
@@ -435,7 +435,7 @@ h3.margin_top_60{
   .navbar-nav>li>a{
     line-height: 20px;
     font-size: 18px;
-    color: #fff !important;
+    color: #333 !important;
   }
   .menu_offset{
     top: -60px;
