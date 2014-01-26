@@ -1,3 +1,13 @@
+// set full window height
+$(document).ready(function(){
+  var height = $(window).height();
+  $('.main_cover').css('min-height', height);
+  $('.content_section').css('min-height',height);
+  $('#history_div').css('min-height',height);
+})
+
+
+
 //fixing navbar
 $(document).ready(function(){
 	var device_height = $(window).height();
