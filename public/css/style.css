@@ -17,6 +17,10 @@ html, body{
 }
 
 /*main*/
+
+#main{
+  /*text-align: center !important;*/
+}
 #main.container{
   background-image: url('/img/bg_2low.jpg');
   -webkit-background-size: cover;
@@ -39,11 +43,12 @@ html, body{
 h1.main_logo{
   margin-top: 0px;
   padding-top: 12%;
-  font-size: 160px;
+  font-size: 200px;
   margin-bottom: 0px;
   text-shadow: 0px 0px 2px #000;
   width: 600px;
-  font-weight: 
+  letter-spacing:-10px;
+  margin-right:60px;
 }
 
 span.PR{
@@ -53,18 +58,11 @@ span.PR{
 
 nav .main_logo{
   margin-top: 0px;
-  /*padding-top: 12%;*/
   font-size: 24px;
   padding-top: 6px;
-  /*font-size: 160px;*/
-  /*margin-bottom: 0px;*/
-  /*text-shadow: 0px 0px 2px #000;*/
   width: 100px;
-  /*line-height: -30px;*/
-  /*padding-bottom: 30px; */
 }
 
-nav 
 
 h2.date{
   font-size: 46px;
