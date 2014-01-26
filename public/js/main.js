@@ -9,7 +9,23 @@ $(document).ready(function(){
 
 //main submit form
 function submit(){
-    document.getElementById("hidden_submit").click();
+  console.log($('#email_address').val())
+  $.ajax({
+    url:'/hacker',
+    type:'POST',
+    data:  {'email':$('#email_address').val()},
+    success: function(){
+            console.log('OK');
+    },
+    error: function(){
+            console.log('ERROR');
+    },
+    statusCode: {
+      200: function(){
+        console.log('pre-registro exitoso');
+      },
+    }
+  })  
 }
 
 //fixing navbar
@@ -69,23 +85,3 @@ $(window).scroll(function() {
     }
 }).scroll();
 
-
-
-
- $.ajax({
-    url:'/hacker',
-    type:'POST',
-    data: $('#email').val(),
-    success: function(){
-            console.log('OK');
-    },
-    error: function(){
-            console.log('ERROR');
-    },
-    statusCode: {
-      200: function(){
-        console.log('pre-registro exitoso');
-        // $('.open-success-popup').click();
-      },
-    }
-})
