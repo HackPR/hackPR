@@ -9,6 +9,12 @@ html, body{
   border: none;
 }
 
+html, body{
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /*main*/
 #main.container{
@@ -164,7 +170,7 @@ button.submit_btn{
 }
 
 #nav_menu{
-  height: 70px !important;
+  height: 60px !important;
 }
 .navbar-default {
   background: rgba(163, 189, 100, 0.75);
@@ -178,14 +184,14 @@ button.submit_btn{
 }
 
 .navbar-nav>li{
-  height: 70px;
+  height: 60px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .navbar-nav>li>a{
-  line-height: 40px;
-  font-size: 18px;
+  line-height: 30px;
+  font-size: 14px;
   color: #fff !important;
 }
 
@@ -396,4 +402,12 @@ h3.margin_top_60{
   #faq_div.content_section{
     padding-top: 0px;
   }
+}
+
+
+/*debugging stuff*/
+
+#main{
+  height: 100% !important;
+  min-height: 100%;
 }

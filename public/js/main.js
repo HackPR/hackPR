@@ -1,32 +1,15 @@
 // set full window height
 $(document).ready(function(){
-  var height = window.innerHeight;
-  $('#main').css('min-height', height);
+  // var height = window.innerHeight;
+  var height = $(window).height();
+  $('#main').css('height', height);
+  // $('#main').css('min-height', height);
   $('.main_cover').css('min-height', height);
   $('.content_section').css('min-height',height);
   $('#history_div').css('min-height',height);
 })
 
-//main submit form
-function submit(){
-  console.log($('#email_address').val())
-  $.ajax({
-    url:'/hacker',
-    type:'POST',
-    data:  {'email':$('#email_address').val()},
-    success: function(){
-            console.log('OK');
-    },
-    error: function(){
-            console.log('ERROR');
-    },
-    statusCode: {
-      200: function(){
-        console.log('pre-registro exitoso');
-      },
-    }
-  })  
-}
+
 
 //fixing navbar
 $(document).ready(function(){
@@ -85,3 +68,26 @@ $(window).scroll(function() {
     }
 }).scroll();
 
+
+
+
+//main submit form
+function submit(){
+  console.log($('#email_address').val())
+  $.ajax({
+    url:'/hacker',
+    type:'POST',
+    data:  {'email':$('#email_address').val()},
+    success: function(){
+            console.log('OK');
+    },
+    error: function(){
+            console.log('ERROR');
+    },
+    statusCode: {
+      200: function(){
+        console.log('pre-registro exitoso');
+      },
+    }
+  })  
+}
