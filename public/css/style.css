@@ -18,11 +18,12 @@ html, body{
 
 /*main*/
 #main.container{
-  background-image: url('/img/bg_1.jpg');
+  background-image: url('/img/bg_2low.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position:center;
   width: 100% !important;
   padding: 0 !important;
   color: #fff;
@@ -450,3 +451,10 @@ h3.margin_top_60{
 
 
 /*debugging stuff*/
+
+#contact_div{
+  padding-top: 20px;
+  background: url('/img/stressed_linen.png');
+  color: #fff;
+}
+

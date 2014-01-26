@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
   $('#go_to_content').click(function(){
-    $('#content').css('margin-top', -80);
+    $('#content').css('margin-top', -20);
   })
 })
 
@@ -47,17 +47,26 @@ $(function() {
 
 
 //change div on nav click
-$('nav a').on('click', function() {
-    var scrollAnchor = $(this).attr('href'),
-        scrollPoint = $('#' + scrollAnchor).offset().top - 70;
-    $('body,html').animate({
-        scrollTop: scrollPoint
-    }, 500);
-    return false;
+// $('nav a').on('click', function() {
+//     var scrollAnchor = $(this).attr('href'),
+//         scrollPoint = $('#' + scrollAnchor).offset().top - 70;
+//     $('body,html').animate({
+//         scrollTop: scrollPoint
+//     }, 500);
+//     return false;
 
-})
+// })
 
-//change active class on nav elements
+
+$( 'nav a' ).on('click', function(event) {
+    event.preventDefault();
+    var target = "#" + $(this).data('target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 2000);
+});
+
+// change active class on nav elements
 // $(window).scroll(function() {
 //     var windscroll = $(window).scrollTop()+window.innerHeight;
 //     if (windscroll >= 100) {
