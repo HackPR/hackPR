@@ -3,7 +3,11 @@ $(document).ready(function(){
   var height = $(window).height();
   $('.main_cover').css('min-height', height);
   $('.content_section').css('min-height',height);
-  $('#history_div').css('min-height',height);
+
+
+  $('#go_to_content').click(function(){
+    $('#content').css('margin-top', -80);
+  })
 })
 
 
@@ -14,9 +18,13 @@ $(document).ready(function(){
 	$(window).bind('scroll', function() {
       if ($(window).scrollTop() > device_height) {
         $('#navbar').addClass('fixed');
+        $('#content').css('margin-top', 80);
+        // console.log($('#content').height());
        }
        else {
          $('#navbar').removeClass('fixed');
+        $('#content').css('margin-top', 0);
+          // console.log($('#content').height());
        }
     });
 })
@@ -39,7 +47,7 @@ $(function() {
 //change div on nav click
 $('nav a').on('click', function() {
     var scrollAnchor = $(this).attr('href'),
-        scrollPoint = $('#' + scrollAnchor).offset().top - 80;
+        scrollPoint = $('#' + scrollAnchor).offset().top - 70;
     $('body,html').animate({
         scrollTop: scrollPoint
     }, 500);
@@ -53,7 +61,7 @@ $(window).scroll(function() {
     if (windscroll >= 100) {
         $('nav').addClass('fixed');
         $('.content_section').each(function(i) {
-            if ($(this).position().top <= windscroll - 80) {
+            if ($(this).position().top <= windscroll - 60) {
                 $('nav li.active').removeClass('active');
                 $('nav li').eq(i).addClass('active');
             }

@@ -45,10 +45,25 @@ h1.main_logo{
   font-weight: 
 }
 
-h1.main_logo span.PR{
+span.PR{
   color:#a3bd64; 
 }
 
+
+nav .main_logo{
+  margin-top: 0px;
+  /*padding-top: 12%;*/
+  font-size: 24px;
+  padding-top: 6px;
+  /*font-size: 160px;*/
+  /*margin-bottom: 0px;*/
+  /*text-shadow: 0px 0px 2px #000;*/
+  width: 600px;
+  /*line-height: -30px;*/
+  /*padding-bottom: 30px; */
+}
+
+nav 
 
 h2.date{
   font-size: 46px;
@@ -173,7 +188,9 @@ button.submit_btn{
   height: 60px !important;
 }
 .navbar-default {
-  background: rgba(163, 189, 100, 0.75);
+  /*background: rgba(163, 189, 100, 0.75);*/
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   border:none;
   z-index: 4;
 }
@@ -181,18 +198,20 @@ button.submit_btn{
 .navbar{
   min-height: 50px;
   border-radius: 0px;
+
 }
 
 .navbar-nav>li{
   height: 60px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 .navbar-nav>li>a{
   line-height: 30px;
   font-size: 14px;
-  color: #fff !important;
+  /*color: #fff !important;*/
+  color: #000;
 }
 
 .navbar .navbar-nav {
@@ -201,16 +220,18 @@ button.submit_btn{
 }
 
 .navbar .navbar-collapse {
-  text-align: center;
+  text-align: right;
 }
-.navbar-nav .active {
-  background: rgba(163, 189, 100, 1);
-  border-bottom: 2px solid #68a3c4 !important;
+.navbar-nav .active a {
+  /*background: rgba(163, 189, 100, 1);*/
+  border-bottom: 2px solid #a3bd64 !important;
   border:none;
 }
 
-.navbar-nav>li:hover{
-  background: rgba(163, 189, 100, 1);
+.navbar-nav>li:hover a{
+  /*background: rgba(163, 189, 100, 1);*/
+  border-bottom: 2px solid #a3bd64 !important;
+
 }
 
 nav a:hover{
@@ -246,8 +267,11 @@ nav a:hover{
 
 /*CONTENT*/
 #content{
-  height: 2000px;
-  padding-top: 140px;
+  /*height: 100%;*/
+  padding-top: 20px;
+  display: block;
+  z-index: 10 !important;
+  margin-bottom: 400px;
 }
 
 #faq{
@@ -255,12 +279,13 @@ nav a:hover{
 }
 .menu_offset, .faq_offset{
   position: relative;
-  top: -98px;
+  top: -92px;
 }
 
 .content_section{
-  width: 100%;
-  min-width: 
+  /*width: 100%;*/
+  min-height: 700px;
+  z-index: 2;
 }
 
 a.section {
@@ -269,11 +294,29 @@ a.section {
 }
 
 .content_section{
-  margin-top: -10px;
-  padding: 50px;
+  /*background-color: #fff;*/
+  /*margin-top: -10px;*/
+  /*padding: 50px;*/
 }
 .content_section h1{
   margin-top: 0px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 2px;
+  /*margin-bottom: 20px;*/
+  width: auto;
+  display:inline-block; 
+}
+
+
+footer{
+  background-image: url('/img/stressed_linen.png');
+  width: 100%;
+  /*position: fixed;*/
+  z-index: 2;
+  min-height: 500px;
+  display: block;
+  background-color: #333; 
+  bottom: 0px;
 }
 
 
@@ -406,8 +449,3 @@ h3.margin_top_60{
 
 
 /*debugging stuff*/
-
-#main{
-  height: 100% !important;
-  min-height: 100%;
-}
