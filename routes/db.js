@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/hack');
+mongoose.connect(process.env.MONGOHQ_URL);
 
 var db = mongoose.connection;
 
@@ -11,8 +11,8 @@ db.once('open', function callback () {
 });
 
 var hackerSchema = mongoose.Schema({
-    email : String
-  });
+  email : String
+});
 
-  exports.Hacker = mongoose.model('Hacker', hackerSchema);
+exports.Hacker = mongoose.model('Hacker', hackerSchema);
 

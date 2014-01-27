@@ -1,7 +1,7 @@
 var express = require('express');
 var routes = require('./routes');
 var db = require('./routes/db');
-var init = require('./routes/home');
+var routes = require('./routes/index');
 var hacker = require('./routes/hacker');
 var http = require('http');
 var path = require('path');
@@ -23,7 +23,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', init.home);
+app.get('/', routes.index);
 app.post('/hacker', hacker.collect);
 
 http.createServer(app).listen(app.get('port'), function(){

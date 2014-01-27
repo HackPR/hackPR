@@ -4,9 +4,10 @@ var sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SE
 
 exports.collect = function (req, res, next) {
   //get the user emails, store them in the db
-  console.log(req.body.email);
+  // console.log(req);
   if (req.body) {
     //create a new hacker document
+    console.log(req.body.email)
     var hacker = db.Hacker({
       email : req.body.email
     });
@@ -18,7 +19,7 @@ exports.collect = function (req, res, next) {
       }
       sendgrid.send({
         to : req.body.email,
-        from : 'developer.cesar@gmail.com',
+        from : 'info@hackpr.io',
         subject : 'hackPR: Good things are brewing!',
         html: '<h3>You\'ve been succesfully added to our mailling list.</h3><p>Awesome things are incoming! We\'ll keep you posted on important event details through this email.</p><p>Thanks</p><h5>- HackPR Team </h5>'
       }, function (err, json) {
@@ -27,7 +28,7 @@ exports.collect = function (req, res, next) {
         }
         res.render('thanks', {email : req.body.email});
       });
-    });
+     });
   }
   else {
     //There was no form data
