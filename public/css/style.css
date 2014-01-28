@@ -476,7 +476,7 @@ img.social_icon{
   color: #a3bd64;
   text-decoration: italic;
   font-weight: lighter;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .contact_email:hover{
@@ -497,5 +497,6 @@ img.social_icon{
 }
 
 #current_email{
-  color: #a3bd64;
+  color: #a3bd64
 }
+
