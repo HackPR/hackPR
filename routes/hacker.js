@@ -3,8 +3,8 @@ var dotenv = require('dotenv').load();
 var sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 exports.collect = function (req, res, next) {
+
   //get the user emails, store them in the db
-  // console.log(req);
   if (req.body) {
     //create a new hacker document
     console.log(req.body.email)
@@ -15,6 +15,7 @@ exports.collect = function (req, res, next) {
     hacker.save( function (err, result) {
       if (err) {
         //Handle this error.
+        res.send(404);
         throw err;
       }
       sendgrid.send({
@@ -24,15 +25,16 @@ exports.collect = function (req, res, next) {
         html: '<h3>You\'ve been succesfully added to our mailling list.</h3><p>Awesome things are incoming! We\'ll keep you posted on important event details through this email.</p><p>Thanks</p><h5>- HackPR Team </h5>'
       }, function (err, json) {
         if (err) {
+          res.send(404);
           throw err;
         }
-        res.render('thanks', {email : req.body.email});
+        res.send(200);
       });
      });
   }
   else {
     //There was no form data
-    res.redirect('/')
+    res.send(204);
   }
 
 };

@@ -67,22 +67,27 @@ $( 'nav a' ).on('click', function(event) {
 
 
 //main submit form
-function submit(){
-  console.log($('#email_address').val())
-  $.ajax({
-    url:'/hacker',
-    type:'POST',
-    data:  {'email':$('#email_address').val()},
-    success: function(){
-            console.log('OK');
-    },
-    error: function(){
-            console.log('ERROR');
-    },
-    statusCode: {
-      200: function(){
-        console.log('pre-registro exitoso');
-      },
-    }
-  })  
-}
+
+$(document).ready( function () {
+  $('#fake_button').on('click', function (event) {
+    
+    event.preventDefault();
+
+      $.ajax({
+        url: '/hacker',
+        type: 'POST',
+        data:  {'email':$('#email_address').val()},
+        statusCode: {
+          200 : function (data){
+             console.log('Registry succeeded');
+          },
+          404 :  function (data) {
+            console.log('Resource was not found.')
+          },
+          204 : function (data) {
+            console.log('Invalid parameters');
+          }
+      }
+    });
+  });
+});
