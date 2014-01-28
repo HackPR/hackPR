@@ -1,4 +1,18 @@
 hackPR
 ======
 
-Single page for hackathon website
+Event information and registration for hackPR hackathon.
+
+Stack:
+======
+- Node.js
+- Express.js
+- MongoDB
+- SendGrid
+
+
+
+To-Do:
+======
+- Add favicon
+- Fix random navbar at the bottom of the page, just when loading.
