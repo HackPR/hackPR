@@ -10,3 +10,15 @@
         a#fake_button  go
       .go_to_wrapper
         a#go_to_content(href="#content")
+
+
+    button.btn.btn-primary.hide.btn-lg#success_modal(data-toggle='modal', data-target='#myModal')
+
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            h3 You are Awesome!
+            p We've succefully added you, 
+              span#current_email
+              | , to our mailling list. Big things are approching :D
