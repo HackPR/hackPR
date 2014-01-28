@@ -459,3 +459,34 @@ h3.margin_top_60{
   color: #fff;
 }
 
+
+
+#sponsors_div img{
+  width: 300px;
+}
+
+img.social_icon{
+  width: 60px;
+  padding-right: 20px;
+}
+
+.contact_email{
+  font-size: 50px;
+  color: #a3bd64;
+  text-decoration: italic;
+  font-weight: lighter;
+  padding-top: 40px;
+}
+
+.contact_email:hover{
+  color: white;
+  text-decoration: none;
+  text-transform: italic;
+}
+#contact_sub_div{
+  /*text-align: right;*/
+}
+
+#contact_sub_div h1{
+  /*text-align: left;*/
+}
