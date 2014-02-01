@@ -7,6 +7,25 @@
       h2.location University of Puerto Rico - Mayagüez Campus
       form#subscribe_form
         input.main_input_subscribe#email_address(type="email", name="email", placeholder='pre-register with your email', required)
+<<<<<<< HEAD
         a#fake_button(onclick='submit()')  go
       .go_to_wrapper
         a#go_to_content(href="#content")
+=======
+        a#fake_button  go
+      .go_to_wrapper
+        a#go_to_content(href="#content")
+
+
+    button.btn.btn-primary.hide.btn-lg#success_modal(data-toggle='modal', data-target='#myModal')
+
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-body
+            h3 You are Awesome!
+            p We've succefully added you, 
+              span#current_email
+              | , to our mailling list. 
+            p Big things are approching :D
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa

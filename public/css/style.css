@@ -80,7 +80,11 @@ h2.location{
 
 
 a#fake_button{
+<<<<<<< HEAD
   background-color: rgba(255,255,255,0.1); 
+=======
+  background-color: rgba(255,255,255,0.125); 
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
 
   height: 60px;
   width: 100px;
@@ -98,13 +102,21 @@ a#fake_button{
 }
 
 a#fake_button:hover{
+<<<<<<< HEAD
   background-color: rgba(255,255,255,0.4); 
+=======
+  background-color: rgba(255,255,255,0.3); 
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
   color: #ffffff;
 }
 
 
 .main_input_subscribe{
+<<<<<<< HEAD
   background-color: rgba(255,255,255,0.1);
+=======
+  background-color: rgba(255,255,255,0.125);
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
   border:none;
   height: 60px;
   width:500px;
@@ -302,6 +314,10 @@ a.section {
   margin-top: 0px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
   padding-bottom: 2px;
+<<<<<<< HEAD
+=======
+  font-weight: 200;
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
   /*margin-bottom: 20px;*/
   width: auto;
   display:inline-block; 
@@ -448,6 +464,13 @@ h3.margin_top_60{
   .main_input_subscribe{
     font-size: 16px;
   }
+<<<<<<< HEAD
+=======
+  h1.main_logo{
+    letter-spacing:-5px;
+    margin-right:0px;
+  }
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
 }
 
 
@@ -459,3 +482,52 @@ h3.margin_top_60{
   color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+#sponsors_div a{
+   color: #a3bd64;
+  text-decoration: none;
+
+
+}
+
+
+#sponsors_div img{
+  width: 300px;
+}
+
+img.social_icon{
+  width: 60px;
+  padding-right: 20px;
+}
+
+.contact_email{
+  font-size: 50px;
+  color: #a3bd64;
+  text-decoration: italic;
+  font-weight: lighter;
+  margin-top: 40px;
+}
+
+.contact_email:hover{
+  color: white;
+  text-decoration: none;
+  text-transform: italic;
+}
+#contact_sub_div{
+  /*text-align: right;*/
+}
+
+#contact_sub_div h1{
+  /*text-align: left;*/
+}
+
+#myModal *{
+  color: #333;
+}
+
+#current_email{
+  color: #a3bd64
+}
+
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa

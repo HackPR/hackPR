@@ -3,9 +3,12 @@ $(document).ready(function(){
   var height = $(window).height();
   $('.main_cover').css('min-height', height);
 
+<<<<<<< HEAD
   // $('.content_section').css('min-height',height);
 
 
+=======
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
   $('#go_to_content').click(function(){
     $('#content').css('margin-top', -20);
   })
@@ -67,6 +70,7 @@ $( 'nav a' ).on('click', function(event) {
 
 
 //main submit form
+<<<<<<< HEAD
 function submit(){
   console.log($('#email_address').val())
   $.ajax({
@@ -86,3 +90,30 @@ function submit(){
     }
   })  
 }
+=======
+
+$(document).ready( function () {
+  $('#fake_button').on('click', function (event) {
+    event.preventDefault();
+      $.ajax({
+        url: '/hacker',
+        type: 'POST',
+        data:  {'email':$('#email_address').val()},
+        statusCode: {
+          200 : function (data){
+             console.log('Registry succeeded');
+             $('#current_email').text($('#email_address').val());
+             $('#success_modal').click();
+             $('#email_address').val(' ');
+          },
+          404 :  function (data) {
+            console.log('Resource was not found.')
+          },
+          204 : function (data) {
+            console.log('Invalid parameters');
+          }
+      }
+    });
+  });
+});
+>>>>>>> 23c44c465879273315bf03bc1947cfe6cdb4d1fa
