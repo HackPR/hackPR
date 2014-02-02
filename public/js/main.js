@@ -26,12 +26,15 @@ $(document).ready(function(){
       var scrollTop     = $(window).scrollTop();
       var elementOffset = $(this).offset().top;
       var distance      = (elementOffset - scrollTop);
-      $(this).removeClass('.active');
-      if(distance <= 40 && distance > 0){
+      if(distance <= 46 && distance > 0){
         var current = $(this).attr('id');
         var nav = $('.'+current+'_nav').attr('href');
-        console.log(nav);
-        $(current+'_nav').addClass('.active');
+        $('.active').removeClass('active');
+        $('.'+current+'_nav').addClass('active');
+      }
+      if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        $('.active').removeClass('active');
+        $('.contact_nav').addClass('active');
       }
     })
   });
@@ -40,6 +43,8 @@ $(document).ready(function(){
 //changing element
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -54,13 +59,14 @@ $(function() {
 });
 
 
-$( 'nav a' ).on('click', function(event) {
-    event.preventDefault();
-    var target = "#" + $(this).data('target');
-    $('html, body').animate({
-        scrollTop: $(target).offset().top
-    }, 2000);
-});
+// $( 'nav a' ).on('click', function(event) {
+//     event.preventDefault();
+//     var target = "#" + $(this).data('target');
+//     $(this).addClass('active');
+//     $('html, body').animate({
+//         scrollTop: $(target).offset().top
+//     }, 2000);
+// });
 
 
 //main submit form
