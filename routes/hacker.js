@@ -1,5 +1,4 @@
 var db = require('./db');
-var dotenv = require('dotenv').load();
 var sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 exports.collect = function (req, res, next) {

@@ -10,6 +10,5 @@
     "jade": "*",
     "mongoose" : "*",
     "sendgrid" : "0.4.4",
-    "dotenv" : "*"
   }
 }
