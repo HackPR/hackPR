@@ -1,0 +1,10 @@
+#robots.txt for HackPR.io
+
+
+User-agent: *
+Allow : /
+
+#Allow upload images in google image search 
+
+User-agent: Googlebot-Image
+Allow: /public/uploads
