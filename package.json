@@ -9,6 +9,6 @@
     "express": "3.4.0",
     "jade": "*",
     "mongoose" : "*",
-    "sendgrid" : "0.4.4",
+    "sendgrid" : "0.4.4"
   }
 }
