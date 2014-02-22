@@ -7,7 +7,7 @@ exports.collect = function (req, res, next) {
   if (req.body) {
     //create a new hacker document
     console.log(req.body.email)
-    if(req.body.email.length > 0){
+    if(validateEmail(req.body.email)){
       var hacker = db.Hacker({
         email : req.body.email
       });
@@ -33,6 +33,7 @@ exports.collect = function (req, res, next) {
      });
     }
     else{
+      console.log('not saved');
       res.send(204);
     }
   }
@@ -42,3 +43,8 @@ exports.collect = function (req, res, next) {
   }
 
 };
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
