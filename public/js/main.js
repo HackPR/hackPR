@@ -74,6 +74,7 @@ $(function() {
 $(document).ready( function () {
   $('#fake_button').on('click', function (event) {
     event.preventDefault();
+    if(validateEmail($('#email_address').val())){
       $.ajax({
         url: '/hacker',
         type: 'POST',
@@ -93,5 +94,20 @@ $(document).ready( function () {
           }
       }
     });
+  }
+  else{
+    alert('Incorrect Email');
+  }
   });
 });
+
+
+$('#email_address').on('input',function(){
+    var input = $(this).val();
+    valid_email = validateEmail(input);
+}) 
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
