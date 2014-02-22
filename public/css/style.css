@@ -489,6 +489,9 @@ h3.margin_top_60{
   width: 300px;
 }
 
+#sponsors_div .col-md-4{
+  text-align: center;
+}
 img.social_icon{
   width: 60px;
   padding-right: 14px;
@@ -527,4 +530,5 @@ img.social_icon{
 
 img.limit_height{
   width: 50% !important;
+  margin: 0 auto;
 }
