@@ -25,8 +25,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.post('/hacker', hacker.collect);
+// app.post('/hacker', hacker.collect);
+app.get('/register', hacker.register);
+
 app.get('/robots.txt', routes.robots);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

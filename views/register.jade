@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  #form-container
+    #wufoo-zd8c0el13hoabp
+     a(href="https://hackpr.wufoo.com/forms/zd8c0el13hoabp", target="_blank") Register
+
+  script.
+    var zd8c0el13hoabp;(function(d, t) {
+    var s = d.createElement(t), options = {
+    'userName':'hackpr', 
+    'formHash':'zd8c0el13hoabp', 
+    'autoResize':true,
+    'height':'1254',
+    'async':true,
+    'host':'wufoo.com',
+    'header':'show', 
+    'ssl':true};
+    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+    s.onload = s.onreadystatechange = function() {
+    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try { zd8c0el13hoabp = new WufooForm();zd8c0el13hoabp.initialize(options);zd8c0el13hoabp.display(); } catch (e) {}};
+    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+    })(document, 'script');
+
