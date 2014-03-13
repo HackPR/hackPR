@@ -270,7 +270,7 @@ nav a:hover{
   padding-top: 20px;
   display: block;
   z-index: 10 !important;
-  margin-bottom: 400px;
+  /*margin-bottom: 400px;*/
 }
 
 #faq{
