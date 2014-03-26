@@ -54,3 +54,7 @@ exports.register = function(req,res,next){
   res.render('register');
 
 }
+
+exports.regi_sponsors = function(req,res,next){
+  res.render('register_sponsors');
+}

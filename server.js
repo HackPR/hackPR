@@ -28,6 +28,8 @@ app.get('/', routes.index);
 // app.post('/hacker', hacker.collect);
 app.get('/register', hacker.register);
 
+app.get('/register/sponsors', hacker.regi_sponsors);
+
 app.get('/robots.txt', routes.robots);
 
 
