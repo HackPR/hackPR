@@ -7,19 +7,15 @@
       h2.location University of Puerto Rico - Mayagüez Campus
       h2.location Business Administration Building
       //- a.register.grow-rotate(href='/register')  Register Now!
-      a.register.grow-rotate(href="#content") LEARN MORE
+      row
+        .col-md-3
+          a.register.grow-rotate(href="#rules_aux") Rules
+        .col-md-3
+          a.register.grow-rotate(href="#agenda_aux" style="background:#68a3c4") Agenda
+        .col-md-3
+          a.register.grow-rotate(href="#judges_aux" style="background:#e7bf59") Judges
+        .col-md-3
+          a.register.grow-rotate(href="#prizes_aux" style="background:#d0524e") Prizes
 
       .go_to_wrapper
         a#go_to_content(href="#content")
-
-    button.btn.btn-primary.hide.btn-lg#success_modal(data-toggle='modal', data-target='#myModal')
-
-    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-      .modal-dialog
-        .modal-content
-          .modal-body
-            h3 You are Awesome!
-            p We've succefully added you, 
-              span#current_email
-              | , to our mailling list. 
-            p Big things are approching :D
