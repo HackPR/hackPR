@@ -281,6 +281,11 @@ nav a:hover{
   top: -96px;
 }
 
+.external_offset{
+  position: relative;
+  top: 80px !important;
+}
+
 .content_section{
   /*width: 100%;*/
   min-height: 400px;
@@ -581,3 +586,42 @@ a.grow-rotate:hover {
 
 }
 
+
+a.btn-bio{
+  /*background: #a3bd64;*/
+  color: #a3bd64;
+  border: none;
+/*  padding: 10px;
+  padding-bottom: 6px;
+  padding-top: 6px;*/
+  /*margin-left: 40px;  */
+}
+
+a.btn-bio:hover{
+  /*background: #95b058;*/
+}
+/*
+#judges_div h3{
+  color: #a3bd64;
+  font-weight: 300;
+
+}*/
+
+.front-judge{
+  float: left;
+  width: 150px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.top{
+  margin-top: 0px;
+}
+.bottom{
+  margin-bottom: 0px;
+}
+/*
+.content_section h1 span{
+position: absolute; 
+top: -65px;
+}*/
