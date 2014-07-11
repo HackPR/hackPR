@@ -68,7 +68,7 @@ h2.date{
   font-size: 46px;
   margin-top: 0px;
   margin-bottom: 0px;
-  width: 500px;
+  width: 550px;
 }
 
 h2.location{
@@ -81,13 +81,12 @@ h2.location{
 
 a#fake_button{
   background-color: rgba(255,255,255,0.125); 
-
   height: 60px;
-  width: 100px;
+  width: 200px;
   display: block;
   color: #fff;
   font-size: 30px;
-  line-height: 50px;
+  line-height: 60px;
   text-decoration: none;
   font-weight: lighter;
   float: right;
@@ -121,7 +120,7 @@ a#fake_button:hover{
 }
 
 #subscribe_form{
-  width: 600px;
+  width: 700px;
   margin-top: 40px;
 }
 
@@ -143,7 +142,7 @@ a#fake_button:hover{
     font-weight: lighter;
 }
 
-button.submit_btn{
+#submit_btn{
   display: none;
 }
 
