@@ -73,31 +73,32 @@ $(function() {
 
 $(document).ready( function () {
   $('#fake_button').on('click', function (event) {
-    event.preventDefault();
-    if(validateEmail($('#email_address').val())){
-      $.ajax({
-        url: '/hacker',
-        type: 'POST',
-        data:  {'email':$('#email_address').val()},
-        statusCode: {
-          200 : function (data){
-             console.log('Registry succeeded');
-             $('#current_email').text($('#email_address').val());
-             $('#success_modal').click();
-             $('#email_address').val(' ');
-          },
-          404 :  function (data) {
-            console.log('Resource was not found.')
-          },
-          204 : function (data) {
-            console.log('Invalid parameters');
-          }
-      }
-    });
-  }
-  else{
-    alert('Incorrect Email');
-  }
+    $("#mainclick").click();
+  //   event.preventDefault();
+  //   if(validateEmail($('#email_address').val())){
+  //     $.ajax({
+  //       url: '/hacker',
+  //       type: 'POST',
+  //       data:  {'email':$('#email_address').val()},
+  //       statusCode: {
+  //         200 : function (data){
+  //            console.log('Registry succeeded');
+  //            $('#current_email').text($('#email_address').val());
+  //            $('#success_modal').click();
+  //            $('#email_address').val(' ');
+  //         },
+  //         404 :  function (data) {
+  //           console.log('Resource was not found.')
+  //         },
+  //         204 : function (data) {
+  //           console.log('Invalid parameters');
+  //         }
+  //     }
+  //   });
+  // }
+  // else{
+  //   alert('Incorrect Email');
+  // }
   });
 });
 
