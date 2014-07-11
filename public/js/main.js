@@ -74,6 +74,7 @@ $(function() {
 $(document).ready( function () {
   $('#fake_button').on('click', function (event) {
     $("#mainclick").click();
+    console.log('clocked');
   //   event.preventDefault();
   //   if(validateEmail($('#email_address').val())){
   //     $.ajax({

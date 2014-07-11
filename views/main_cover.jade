@@ -6,13 +6,13 @@
       h2.date September 27 - 28, 2014
       br
       h2.location University of Puerto Rico - Mayagüez Campus
-      h2.location Coliseo Rafael A. Mangual
-      iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(submitted) {window.location='/';}")
+      h2.location Rafael A. Mangual Coliseum
+      iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(submitted) {window.location='http://hackpr.io/';}")
 
 
       form(id="subscribe_form", class="form", action="https://docs.google.com/a/dbartolomei.com/forms/d/1QifneYYGb89KQhDkfADwjvn13cKFY1YIgC-5MZ57QKQ/formResponse", method="POST", target="hidden_iframe", onsubmit="submitted=true;")
         input(type="text", name="entry.1207647764", value="", class="ss-q-short main_input_subscribe", id="email_address", dir="auto", aria-label="email  " title="", placeholder="email")
-        input.hide(type="submit")
+        input.hide#mainclick(type="submit")
         a#fake_button(href="#") PreRegister
 
 
