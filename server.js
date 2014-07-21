@@ -23,6 +23,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/robots.txt', routes.robots);
+// app.get('/sponsorship', routes.pdf);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
