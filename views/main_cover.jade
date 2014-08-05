@@ -1,49 +1,12 @@
 #main.container
   center
     .main_cover
-      h1.main_logo hack
+      h1.main_logo Hack
         span.PR PR
       h2.date September 27 - 28, 2014
       br
       h2.location University of Puerto Rico - Mayagüez Campus
       h2.location Rafael A. Mangual Coliseum
-      iframe(name="hidden_iframe", id="hidden_iframe", style="display:none;", onload="if(submitted) {window.location='http://hackpr.io/';}")
 
-
-      form(id="subscribe_form", class="form", action="https://docs.google.com/a/dbartolomei.com/forms/d/1QifneYYGb89KQhDkfADwjvn13cKFY1YIgC-5MZ57QKQ/formResponse", method="POST", target="hidden_iframe", onsubmit="submitted=true;")
-        input(type="text", name="entry.1207647764", value="", class="ss-q-short main_input_subscribe", id="email_address", dir="auto", aria-label="email  " title="", placeholder="email")
-        input.hide#mainclick(type="submit")
-        a#fake_button(href="#") PreRegister
-
-
-
-
-
-//- <form action="https://docs.google.com/a/dbartolomei.com/forms/d/1QifneYYGb89KQhDkfADwjvn13cKFY1YIgC-5MZ57QKQ/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
-//- <div class="ss-form-question errorbox-good" role="listitem">
-//- <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-//- <label class="ss-q-item-label" for="entry_1207647764"><div class="ss-q-title">email
-//- </div>
-//- <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-//- <input type="text" name="entry.1207647764" value="" class="ss-q-short" id="entry_1207647764" dir="auto" aria-label="email  " title="">
-//- <div class="error-message" id="601799229_errorMessage"></div>
-//- <div class="required-message">This is a required question</div>
-//- </div></div></div>
-//- <input type="hidden" name="draftResponse" value="[,,&quot;8740759547796650028&quot;]
-//- ">
-//- <input type="hidden" name="pageHistory" value="0">
-
-
-//- <input type="hidden" name="fbzx" value="8740759547796650028">
-
-//- <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-//- <input type="submit" name="submit" value="Submit" id="ss-submit">
-//- <div class="ss-password-warning ss-secondary-text">Never submit passwords through Google Forms.</div></td>
-//- </tr></tbody></table></div></ol></form>
-
-
-
-
-
-      
-
+      a.home_user_action(href="/register") Register
+      a.home_user_action(href="/login") Login
