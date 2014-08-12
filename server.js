@@ -21,6 +21,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// app.get('/sponsorship.pdf', function(req,res){
+//   res.redirect('/sponsorship');
+// });
+
 // app.get('/', routes.index);
 // app.get('/register',routes.register);
 // app.get('/robots.txt', routes.robots);
