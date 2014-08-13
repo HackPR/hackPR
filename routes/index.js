@@ -12,5 +12,5 @@ exports.robots = function(req, res){
 }
 
 exports.register = function(req,res){
-  res.render('register');
+  res.redirect('/register.html');
 }

@@ -26,7 +26,7 @@ if ('development' == app.get('env')) {
 // });
 
 // app.get('/', routes.index);
-// app.get('/register',routes.register);
+app.get('/register', routes.register);
 // app.get('/robots.txt', routes.robots);
 
 http.createServer(app).listen(app.get('port'), function(){
