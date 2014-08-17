@@ -14,3 +14,7 @@ exports.robots = function(req, res){
 exports.register = function(req,res){
   res.redirect('/register.html');
 }
+
+exports.sponsorship = function(req,res){
+  res.redirect('/sponsorship.pdf');
+}
