@@ -1179,7 +1179,7 @@ textarea.w-select {
   -webkit-transform: translate(0, 0);
   /* 2 */
 }
-/** 
+/**
  * Neat trick to bind the rubberband effect to our canvas instead of the whole
  * document on iOS. It also prevents a bug that causes the document underneath to scroll.
  */
@@ -1198,6 +1198,7 @@ textarea.w-select {
   position: absolute;
   width: 100vw;
   height: 100vh;
+  opacity: 0;
 }
 .w-lightbox-view:before {
   content: "";
@@ -1271,17 +1272,18 @@ textarea.w-select {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  opacity: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 .w-lightbox-left {
+  display: none;
   bottom: 0;
   left: 0;
   /* <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 24 40" width="24" height="40"><g transform="rotate(45)"><path d="m0 0h5v23h23v5h-28z" opacity=".4"/><path d="m1 1h3v23h23v3h-26z" fill="#fff"/></g></svg> */
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==");
 }
 .w-lightbox-right {
+  display: none;
   right: 0;
   bottom: 0;
   /* <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 24 40" width="24" height="40"><g transform="rotate(45)"><path d="m0-0h28v28h-5v-23h-23z" opacity=".4"/><path d="m1 1h26v26h-3v-23h-23z" fill="#fff"/></g></svg> */
@@ -1357,7 +1359,7 @@ textarea.w-select {
 }
 /*
  * Spinner
- * 
+ *
  * Absolute pixel values are used to avoid rounding errors that would cause
  * the white spinning element to be misaligned with the track.
  */
@@ -1392,13 +1394,10 @@ textarea.w-select {
 .w-lightbox-hide {
   display: none;
 }
-.w-lightbox-visible {
-  opacity: 1;
-}
 .w-lightbox-noscroll {
   overflow: hidden;
 }
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .w-lightbox-content {
     height: 96vh;
     margin-top: 2vh;
@@ -1418,10 +1417,12 @@ textarea.w-select {
     max-height: 96vh;
   }
   .w-lightbox-group .w-lightbox-image {
+    max-width: 82.3vw;
     max-height: 84vh;
   }
   .w-lightbox-left,
   .w-lightbox-right {
+    display: block;
     opacity: .5;
   }
   .w-lightbox-close {
@@ -1630,4 +1631,24 @@ textarea.w-select {
   100% {
     transform: rotate(360deg);
   }
+}
+.w-dyn-loading {
+  display: block;
+  padding: 10px;
+}
+.w-dyn-items {
+  display: none;
+}
+.w-dyn-items.visible {
+  display: block;
+}
+.w-dyn-empty {
+  display: none;
+  padding: 10px;
+  background-color: #dddddd;
+}
+.w-dyn-error {
+  display: none;
+  padding: 10px;
+  background-color: #ffdede;
 }

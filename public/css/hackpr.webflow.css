@@ -233,7 +233,7 @@ p {
   padding: 0px 40px 23px;
   border-style: solid;
   border-width: 2px;
-  border-color: rgba(0, 0, 0, 0.20);
+  border-color: rgba(0, 0, 0, 0.2);
   border-radius: 18px;
 }
 .register_form.profile_form {
@@ -241,13 +241,25 @@ p {
   padding-top: 0px;
 }
 .register_submit {
-  margin-top: 9px;
+  display: block;
+  max-width: 500px;
+  margin-top: 91px;
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 10px;
   padding-left: 10px;
-  float: right;
-  background-color: #a3bd64;
+  float: none;
+  border-radius: 9px;
+  background-color: rgba(163, 189, 100, 0.6);
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  font-family: Lato, sans-serif;
   color: white;
-  line-height: 28px;
+  font-size: 50px;
+  line-height: 60px;
   text-decoration: none;
 }
 .section_sponsors {
@@ -405,6 +417,12 @@ p {
   padding-left: 28px;
 }
 @media (max-width: 991px) {
+  .register_submit {
+    -webkit-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
   .icon {
     background-color: #bababa;
   }
@@ -433,6 +451,12 @@ p {
   .section_main_h2 {
     font-size: 19px;
   }
+  .register_submit {
+    -webkit-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
   .icon {
     background-color: #9c9c9c;
   }
@@ -442,7 +466,7 @@ p {
 }
 @media (max-width: 479px) {
   .section_main {
-    height: 600px;
+    height: 400px;
   }
   .main_section_logo {
     max-width: 300px;
@@ -484,6 +508,15 @@ p {
   }
   .register_form {
     border-style: none;
+  }
+  .register_submit {
+    margin-top: -1px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    font-size: 35px;
+    line-height: 40px;
   }
   .section_sponsors {
     padding-top: 20px;
