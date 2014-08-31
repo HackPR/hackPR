@@ -105,7 +105,7 @@ p {
 .section_about {
   padding-top: 46px;
   padding-bottom: 0px;
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 .section_main_register {
   position: relative;
@@ -169,7 +169,7 @@ p {
 }
 .section_faq {
   min-height: 350px;
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 .section_faq_p {
   color: white;
@@ -186,7 +186,7 @@ p {
 }
 .section_faq_container {
   padding: 46px;
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 .section_footer {
   height: 100px;
