@@ -4,6 +4,20 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
+
+.navbar-register{
+  height: 50px;
+  background-color: #333;
+  width: 100%;
+  display: block;
+}
+
+img.register-logo{
+  height: 50px;
+  padding: 6px;
+  margin-left: 10%;
+}
+
 h1 {
   margin-top: 20px;
   margin-bottom: 33px;
@@ -546,4 +560,5 @@ p {
     padding-left: 0px;
   }
 }
+
 

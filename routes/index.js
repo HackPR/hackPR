@@ -2,7 +2,7 @@ var path = require('path');
 var fs = require('fs');
 
 exports.index = function(req, res){
-  res.render('index');
+  res.render('register');
 };
 
 exports.robots = function(req, res){
